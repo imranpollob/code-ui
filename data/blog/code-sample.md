@@ -1,6 +1,6 @@
 ---
 title: Sample .md file
-date: 
+date: 2021-06-28T18:00:00Z
 tags:
 - markdown
 - code
