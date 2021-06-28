@@ -10,16 +10,13 @@ fields:
 - type: datetime
   name: date
   label: Date
-  default: now
   config:
+    export_format: 'YYYY-MM-DD '
     date_format: YYYY-MM-DD
-    time_format: ''
-    export_format: YYYY-MM-DD
+  default: now
 - type: list
   name: tags
   label: Tags
-  config:
-    use_select: false
 - type: text
   name: summary
   label: Summary

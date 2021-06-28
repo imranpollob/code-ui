@@ -48,7 +48,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                       src={siteMetadata.image}
                       width="38px"
                       height="38px"
-                      alt="avatar"
+                      alt="imran pollob"
                       className="w-10 h-10 rounded-full"
                     />
                     <dl className="text-sm font-medium leading-5 whitespace-nowrap">

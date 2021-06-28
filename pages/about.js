@@ -21,7 +21,7 @@ export default function About() {
           <div className="flex flex-col items-center pt-8 space-x-2">
             <Image
               src={siteMetadata.image}
-              alt="avatar"
+              alt="imran pollob"
               width="192px"
               height="192px"
               className="w-48 h-48 rounded-full"
@@ -29,8 +29,8 @@ export default function About() {
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">
               {siteMetadata.author}
             </h3>
-            <div className="text-gray-500 dark:text-gray-400">Professor of Atmospheric Science</div>
-            <div className="text-gray-500 dark:text-gray-400">Stanford University</div>
+            <div className="text-gray-500 dark:text-gray-400">Software Engineer</div>
+            <div className="text-gray-500 dark:text-gray-400">Cefalo</div>
             <div className="flex pt-6 space-x-3">
               <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
               <SocialIcon kind="github" href={siteMetadata.github} />
@@ -42,19 +42,28 @@ export default function About() {
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
             <p>
-              Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His
-              research interests includes complexity modelling of tailwinds, headwinds and
-              crosswinds.
+              Hello There!{' '}
+              <span role="img" aria-label="Waving Hand">
+                👋
+              </span>
             </p>
             <p>
-              He leads the clean energy group which develops 3D air pollution-climate models, writes
-              differential equation solvers, and manufactures titanium plated air ballons. In his
-              free time he bakes raspberry pi.
+              I am Imran Pollob from Bangladesh. I have completed my Bachelor’s and Masters’s
+              degrees in Information Technology from Jahangirnagar University, which is one of the
+              top public universities in my country. Currently, I am working as a Fullstack Software
+              Engineer for more than 4 years. At my current workspace, my job responsibility is to
+              gather renewable energy data from various sources, preprocess, classify and store it
+              on the cloud for further data analysis to predict future energy data.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique
-              placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem
-              nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+              I always wondered how the prediction works almost perfectly and from curiosity, I
+              started learning about Machine Learning specifically Deep Learning and that decision
+              changed my career entirely. Currently, learning and learning to make myself competent
+              for the ML field. Oh snap! it has no learning boundary{' '}
+              <span role="img" aria-label="Upside-Down Face">
+                🙃
+              </span>
+              .
             </p>
           </div>
         </div>
