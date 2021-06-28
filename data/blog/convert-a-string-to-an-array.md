@@ -1,5 +1,5 @@
 ---
-date: 2021-06-28
+date: ! '2021-06-26 '
 title: Convert a string to an array
 tags:
 - string
