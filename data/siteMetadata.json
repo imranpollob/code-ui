@@ -1,0 +1,17 @@
+{
+  "title": "Coding Blog",
+  "author": "Imran Pollob",
+  "headerTitle": "Coding",
+  "description": "Showcasing the coding solutions",
+  "language": "en-us",
+  "siteUrl": "https://tailwind-nextjs-starter-blog.vercel.app",
+  "siteRepo": "https://github.com/timlrx/tailwind-nextjs-starter-blog",
+  "image": "/static/images/avatar.png",
+  "socialBanner": "/static/images/twitter-card.png",
+  "email": "address@yoursite.com",
+  "github": "https://github.com/pollmix",
+  "twitter": "https://twitter.com/imranpollob",
+  "facebook": "https://facebook.com/pollmix",
+  "linkedin": "https://www.linkedin.com/bn/pollmix",
+  "locale": "en-US"
+}
