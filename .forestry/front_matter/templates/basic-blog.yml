@@ -26,3 +26,5 @@ fields:
 - type: boolean
   name: draft
   label: Draft
+pages:
+- data/blog/convert-a-string-to-an-array.md
