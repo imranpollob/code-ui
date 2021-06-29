@@ -30,7 +30,7 @@ export default function ListLayout({ posts, tags, title, initialDisplayPosts = [
             </div>
           </div>
 
-          <TagList tags={tags} />
+          <TagList tags={tags} title={title} />
 
           <div className="relative max-w-lg">
             <input

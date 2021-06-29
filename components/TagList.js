@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Tag from '@/components/Tag'
 import kebabCase from '@/lib/utils/kebabCase'
 
-const TagList = ({ tags, tag }) => {
+const TagList = ({ tags, title }) => {
   const sortedTags = tags && Object.keys(tags).sort((a, b) => tags[b] - tags[a])
 
   return (
@@ -12,7 +12,7 @@ const TagList = ({ tags, tag }) => {
         sortedTags.map((t) => {
           return (
             <div key={t} className="mt-2 mb-2 mr-5">
-              <Tag text={t} selected={tag && t.toLowerCase() === tag.toLowerCase()} />
+              <Tag text={t} selected={title && t.toLowerCase() === title.toLowerCase()} />
               <Link
                 href={`/tags/${kebabCase(t)}`}
                 className="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
