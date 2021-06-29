@@ -25,6 +25,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const allPosts = await getAllFilesFrontMatter('blog')
+  const tags = await getAllTags('blog')
   const filteredPosts = allPosts.filter(
     (post) => post.draft !== true && post.tags.map((t) => kebabCase(t)).includes(params.tag)
   )
@@ -34,10 +35,10 @@ export async function getStaticProps({ params }) {
   fs.mkdirSync(rssPath, { recursive: true })
   fs.writeFileSync(path.join(rssPath, 'index.xml'), rss)
 
-  return { props: { posts: filteredPosts, tag: params.tag } }
+  return { props: { posts: filteredPosts, tags, tag: params.tag } }
 }
 
-export default function Tag({ posts, tag }) {
+export default function Tag({ posts, tags, tag }) {
   // Capitalize first letter and convert space to dash
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
 
@@ -48,7 +49,7 @@ export default function Tag({ posts, tag }) {
         description={`${tag} tags - ${siteMetadata.title}`}
         url={`${siteMetadata.siteUrl}/tags/${tag}`}
       />
-      <ListLayout posts={posts} title={title} />
+      <ListLayout posts={posts} tags={tags} title={title} />
     </>
   )
 }

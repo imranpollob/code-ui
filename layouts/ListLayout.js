@@ -7,7 +7,7 @@ import TagList from '@/components/TagList'
 
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
-export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
+export default function ListLayout({ posts, tags, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
@@ -29,6 +29,9 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               </h1>
             </div>
           </div>
+
+          <TagList tags={tags} />
+
           <div className="relative max-w-lg">
             <input
               aria-label="Search articles"
@@ -53,6 +56,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             </svg>
           </div>
         </div>
+
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
