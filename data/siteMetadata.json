@@ -1,8 +1,8 @@
 {
-  "title": "Coding Solutions",
+  "title": "LeetCode HackerRank Codewars CodinGame CodeSignal solutions",
   "author": "Imran Pollob",
   "headerTitle": "Coding",
-  "description": "LeetCode HackerRank Codewars CodinGame CodeSignal solutions",
+  "description": "LeetCode HackerRank Codewars CodinGame CodeSignal solutions. Most of the solutions are written in Python and Javascript, when possible multiple solutions are added.",
   "language": "en-us",
   "siteUrl": "https://code.imranpollob.com",
   "siteRepo": "https://github.com/pollmix/code-ui",
@@ -12,6 +12,6 @@
   "github": "https://github.com/pollmix",
   "twitter": "https://twitter.com/imranpollob",
   "facebook": "https://facebook.com/pollmix",
-  "linkedin": "https://www.linkedin.com/bn/pollmix",
+  "linkedin": "https://www.linkedin.com/in/pollmix",
   "locale": "en-US"
 }
