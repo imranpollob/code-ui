@@ -5,6 +5,7 @@ import PageTitle from '@/components/PageTitle'
 import PostLayout from '@/layouts/PostLayout'
 import generateRss from '@/lib/generate-rss'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
+import { PageSeo } from '@/components/SEO'
 
 export async function getStaticPaths() {
   const posts = getFiles('blog')
@@ -37,6 +38,7 @@ export default function Blog({ post, prev, next }) {
 
   return (
     <>
+      <PageSeo title={`joy bangla`} />
       {frontMatter.draft !== true ? (
         <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
           <MDXRemote {...mdxSource} components={MDXComponents} />

@@ -7,8 +7,8 @@ export default function About() {
   return (
     <>
       <PageSeo
-        title={`About - ${siteMetadata.author}`}
-        description={`About me - ${siteMetadata.author}`}
+        title={`${siteMetadata.author}`}
+        description={`${siteMetadata.author} - Fullstack software engineer with 4+ years of experience.`}
         url={`${siteMetadata.siteUrl}/about`}
       />
       <div className="divide-y">

@@ -38,6 +38,10 @@ export async function getStaticProps({ params }) {
   return { props: { posts: filteredPosts, tags, tag: params.tag } }
 }
 
+function capitalize(s) {
+  return s[0].toUpperCase() + s.slice(1).toLowerCase()
+}
+
 export default function Tag({ posts, tags, tag }) {
   // Capitalize first letter and convert space to dash
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
@@ -45,8 +49,8 @@ export default function Tag({ posts, tags, tag }) {
   return (
     <>
       <PageSeo
-        title={`${tag} - ${siteMetadata.title}`}
-        description={`${tag} tags - ${siteMetadata.title}`}
+        title={`${capitalize(tag)} solutions`}
+        description={`${siteMetadata.description}`}
         url={`${siteMetadata.siteUrl}/tags/${tag}`}
       />
       <ListLayout posts={posts} tags={tags} title={title} />
