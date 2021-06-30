@@ -59,10 +59,11 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                           <dt className="sr-only">Facebook</dt>
                           <dd>
                             <Link
-                              href={siteMetadata.facebook}
+                              href={siteMetadata.website}
                               className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+                              target="_blank"
                             >
-                              {siteMetadata.facebook.replace('https://facebook.com/', '@')}
+                              {siteMetadata.website.replace('https://', '@')}
                             </Link>
                           </dd>
                         </>

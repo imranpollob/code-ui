@@ -65,6 +65,16 @@ export default function About() {
               </span>
               .
             </p>
+            <div className="pt-5">
+              <a
+                href={siteMetadata.website}
+                className="p-2 border-2 border-solid border-blue-500 hover:border-blue-600 dark:hover:border-blue-400 !no-underline uppercase font-medium text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Visit my portfolio ➡
+              </a>
+            </div>
           </div>
         </div>
       </div>
