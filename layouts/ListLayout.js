@@ -30,7 +30,7 @@ export default function ListLayout({ posts, tags, title, initialDisplayPosts = [
             </div>
           </div>
 
-          <TagList tags={tags} title={title} />
+          <TagList tags={tags} title={title} total={posts.length} />
 
           <div className="relative max-w-lg">
             <input
@@ -67,7 +67,10 @@ export default function ListLayout({ posts, tags, title, initialDisplayPosts = [
                   <div className="space-y-3 xl:col-span-3">
                     <div>
                       <h3 className="text-2xl font-bold leading-8 tracking-tight">
-                        <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-100">
+                        <Link
+                          href={`/${slug}`}
+                          className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+                        >
                           {title}
                         </Link>
                       </h3>

@@ -3,25 +3,29 @@ import Tag from '@/components/Tag'
 import kebabCase from '@/lib/utils/kebabCase'
 
 const TagList = ({ tags, title }) => {
-  const sortedTags = tags && Object.keys(tags).sort((a, b) => tags[b] - tags[a])
+  let status = 'No tags found.'
+  let tagList = null
+
+  if (tags) {
+    status = null
+    let sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])
+    tagList = sortedTags.map((t) => {
+      return (
+        <div key={t} className="mt-2 mb-2 mr-1">
+          <Tag
+            text={t}
+            selected={title && t.toLowerCase() === title.toLowerCase()}
+            count={tags[t]}
+          />
+        </div>
+      )
+    })
+  }
 
   return (
-    <div className="flex flex-wrap max-w-lg">
-      {tags && Object.keys(tags).length === 0 && 'No tags found.'}
-      {tags &&
-        sortedTags.map((t) => {
-          return (
-            <div key={t} className="mt-2 mb-2 mr-5">
-              <Tag text={t} selected={title && t.toLowerCase() === title.toLowerCase()} />
-              <Link
-                href={`/tags/${kebabCase(t)}`}
-                className="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
-              >
-                {` (${tags[t]})`}
-              </Link>
-            </div>
-          )
-        })}
+    <div className="flex flex-wrap">
+      {status && <div className="text-center">{status}</div>}
+      {tagList}
     </div>
   )
 }

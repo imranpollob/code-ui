@@ -35,16 +35,17 @@ export async function getStaticProps({ params }) {
   fs.mkdirSync(rssPath, { recursive: true })
   fs.writeFileSync(path.join(rssPath, 'index.xml'), rss)
 
-  return { props: { posts: filteredPosts, tags, tag: params.tag } }
+  return { props: { posts: filteredPosts, tags, tag: params.tag, total: allPosts.length } }
 }
 
 function capitalize(s) {
   return s[0].toUpperCase() + s.slice(1).toLowerCase()
 }
 
-export default function Tag({ posts, tags, tag }) {
+export default function Tag({ posts, tags, tag, total }) {
   // Capitalize first letter and convert space to dash
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
+  tags['all'] = total
 
   return (
     <>
@@ -53,7 +54,7 @@ export default function Tag({ posts, tags, tag }) {
         description={`${siteMetadata.description}`}
         url={`${siteMetadata.siteUrl}/tags/${tag}`}
       />
-      <ListLayout posts={posts} tags={tags} title={title} />
+      <ListLayout posts={posts} tags={tags} title={title} total={total} />
     </>
   )
 }

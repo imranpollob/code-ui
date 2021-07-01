@@ -19,6 +19,8 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ posts, tags, initialDisplayPosts, pagination }) {
+  tags['all'] = posts.length
+
   return (
     <>
       <PageSeo
@@ -31,6 +33,7 @@ export default function Blog({ posts, tags, initialDisplayPosts, pagination }) {
         tags={tags}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
+        title={'all'}
       />
     </>
   )
