@@ -27,4 +27,4 @@ fields:
   name: draft
   label: Draft
 pages:
-- data/blog/convert-a-string-to-an-array.md
+- data/blog/codesignal-add.md
