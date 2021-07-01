@@ -6,10 +6,9 @@ tags:
   - string
   - array
 summary: ''
+link: https://www.codewars.com/kata/57e76bc428d6fbc2d500036d
 draft: false
 ---
-
-[Problem link](https://www.codewars.com/kata/57e76bc428d6fbc2d500036d 'https://www.codewars.com/kata/57e76bc428d6fbc2d500036d')
 
 ```js
 function stringToArray(string) {

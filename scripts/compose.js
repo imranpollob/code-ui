@@ -22,6 +22,7 @@ date: '${date}'
 tags: []
 draft: true
 summary: 
+link: 
 images: []
 ---
 `

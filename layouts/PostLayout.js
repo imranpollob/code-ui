@@ -11,7 +11,7 @@ const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ children, frontMatter, next, prev }) {
-  const { slug, fileName, date, title, tags } = frontMatter
+  const { slug, fileName, date, title, tags, link } = frontMatter
 
   return (
     <SectionContainer>
@@ -54,9 +54,9 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                     <dl className="text-sm font-medium leading-5 whitespace-nowrap">
                       <dt className="sr-only">Name</dt>
                       <dd className="text-gray-900 dark:text-gray-100">{siteMetadata.author}</dd>
-                      {typeof siteMetadata.twitter === 'string' && (
+                      {typeof siteMetadata.website === 'string' && (
                         <>
-                          <dt className="sr-only">Facebook</dt>
+                          <dt className="sr-only">Website</dt>
                           <dd>
                             <Link
                               href={siteMetadata.website}
@@ -73,9 +73,20 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                 </ul>
               </dd>
             </dl>
-            <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
+            <div className="xl:pb-0 xl:col-span-3 xl:row-span-2">
+              {link && (
+                <div className="pt-10 uppercase font-medium text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
+                  <Link
+                    href={link}
+                    className="p-2 border-2 border-solid border-blue-500 hover:border-blue-600 dark:hover:border-blue-400"
+                  >
+                    Problem Link
+                  </Link>
+                </div>
+              )}
+
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
+              <div className="border-t border-gray-200 dark:border-gray-700 pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
               </div>
             </div>
