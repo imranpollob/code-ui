@@ -1,7 +1,8 @@
-import siteMetadata from '@/data/siteMetadata'
-import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
+import Link from '@/components/Link'
 import { PageSeo } from '@/components/SEO'
+import SocialIcon from '@/components/social-icons'
+import siteMetadata from '@/data/siteMetadata'
 
 export default function About() {
   return (
@@ -66,14 +67,14 @@ export default function About() {
               .
             </p>
             <div className="pt-5">
-              <a
+              <Link
                 href={siteMetadata.website}
                 className="p-2 border-2 border-solid border-blue-500 hover:border-blue-600 dark:hover:border-blue-400 !no-underline uppercase font-medium text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
                 target="_blank"
                 rel="noreferrer"
               >
                 Visit my portfolio ➡
-              </a>
+              </Link>
             </div>
           </div>
         </div>

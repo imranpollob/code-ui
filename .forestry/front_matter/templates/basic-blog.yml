@@ -20,6 +20,9 @@ fields:
 - type: text
   name: summary
   label: Summary
+- type: text
+  name: link
+  label: Link
 - type: boolean
   name: draft
   label: Draft
