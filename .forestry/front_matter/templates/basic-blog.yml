@@ -28,3 +28,5 @@ fields:
   label: Draft
 pages:
 - data/blog/codesignal-add.md
+- data/blog/hackerrank-arrays-solution.md
+- data/blog/hackerrank-solve-me-first-solution.md
