@@ -73,6 +73,15 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                 </ul>
               </dd>
             </dl>
+            {tags && (
+              <div className="py-4">
+                <div className="flex flex-wrap justify-center">
+                  {tags.map((tag) => (
+                    <Tag key={tag} text={`#${tag}`} />
+                  ))}
+                </div>
+              </div>
+            )}
             <div className="xl:m-auto xl:max-w-3xl">
               {link && (
                 <div className="pt-10 uppercase font-medium text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
@@ -91,19 +100,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
               </div>
             </div>
             <footer className="xl:m-auto xl:max-w-3xl">
-              <div className="text-sm font-medium leading-5 divide-gray-200 dark:divide-gray-700">
-                {tags && (
-                  <div className="py-4">
-                    <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                      Tags
-                    </h2>
-                    <div className="flex flex-wrap">
-                      {tags.map((tag) => (
-                        <Tag key={tag} text={tag} />
-                      ))}
-                    </div>
-                  </div>
-                )}
+              <div className="py-4 text-sm font-medium leading-5 divide-gray-200 dark:divide-gray-700">
                 {(next || prev) && (
                   <div className="flex justify-between py-4 space-x-2">
                     {prev && (
