@@ -4,7 +4,6 @@ import Code from '@/data/code.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
-import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 
 const LayoutWrapper = ({ children }) => {
@@ -19,7 +18,7 @@ const LayoutWrapper = ({ children }) => {
                   <Code />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
+                  <div className="block text-xl sm:text-2xl font-semibold">
                     {siteMetadata.headerTitle}
                   </div>
                 ) : (
@@ -29,19 +28,18 @@ const LayoutWrapper = ({ children }) => {
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
-            <div className="hidden sm:block">
+            <div className="block">
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
+                  className="p-2 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
                 >
                   {link.title}
                 </Link>
               ))}
             </div>
             <ThemeSwitch />
-            <MobileNav />
           </div>
         </header>
         <main className="mb-auto">{children}</main>

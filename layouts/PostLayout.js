@@ -108,7 +108,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                         <div className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                           Previous Article
                         </div>
-                        <h2 className="text-base xl:text-lg text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
+                        <h2 className="pt-2 text-base xl:text-lg text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
                           <Link href={`/${prev.slug}`}>{prev.title}</Link>
                         </h2>
                       </div>
@@ -118,7 +118,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                         <div className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                           Next Article
                         </div>
-                        <h2 className="text-base xl:text-lg text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
+                        <h2 className="pt-2 text-base xl:text-lg text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
                           <Link href={`/${next.slug}`}>{next.title}</Link>
                         </h2>
                       </div>
@@ -126,7 +126,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                   </div>
                 )}
               </div>
-              <div className="pt-8">
+              <div className="pt-8 flex justify-center">
                 <Link
                   href="/"
                   className="text-gray-900 dark:text-gray-300 border p-2 border-gray-900 dark:border-gray-300"
