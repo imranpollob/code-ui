@@ -18,7 +18,7 @@ Just return the addition of the two numbers.
 
 ```python
 def solveMeFirst(a,b):
-	return sum(a, b)
+	return a + b
 ```
 
 ### Solution two

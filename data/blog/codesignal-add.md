@@ -16,3 +16,12 @@ Simply return the summation of the two numbers.
 def add(param1, param2):
     return param1 + param2
 ```
+
+### Solution two
+
+Find the addition using library function `sum`. The advantage of the `sum` function is that it can take variable number of arguments. For example, `sum(1, 2, 3, 4)` will also work.
+
+```python
+def add(param1, param2):
+    return sum(param1, param2)
+```
