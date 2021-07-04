@@ -11,16 +11,16 @@ link: https://www.hackerrank.com/challenges/arrays-ds/problem
 draft: false
 
 ---
-Solution one:
+### Solution one:
 
-Using Python's default syntax
+Using Python's default syntax.
 
 ```python
 def reverseArray(a):
     return a[::-1]
 ```
 
-Solution one:
+### Solution two:
 
 Looping from the last item and storing it in an array.
 
@@ -34,7 +34,7 @@ def reverseArray(a):
     return temp
 ```
 
-Solution three:
+### Solution three:
 
 Swap the items until we reach the middle of the array.
 

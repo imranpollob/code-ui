@@ -8,28 +8,30 @@ link: https://app.codesignal.com/arcade/intro/level-2/yuGuHvcCaFCKk56rJ
 draft: false
 ---
 
-Solution one:
+The solutions here are quite similar in a sense that all are based on math.
+
+### Solution one:
 
 ```python
 def shapeArea(n):
     return n*n + (n-1)*(n-1)
 ```
 
-Solution two:
+### Solution two:
 
 ```python
 def shapeArea(n):
     return n**2 + (n-1)**2
 ```
 
-Solution three:
+### Solution three:
 
 ```python
 def shapeArea(n):
     return 2*n*(n-1) + 1
 ```
 
-Solution four:
+### Solution four:
 
 ```python
 def shapeArea(n):

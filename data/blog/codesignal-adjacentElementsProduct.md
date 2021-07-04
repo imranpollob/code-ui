@@ -8,7 +8,9 @@ link: https://app.codesignal.com/arcade/intro/level-2/xzKiBHjhoinnpdh6m
 draft: false
 ---
 
-Solution one:
+### Solution one:
+
+We are gonna find the ajacent product and store the maximum value to `best` variable.
 
 ```python
 def adjacentElementsProduct(inputArray):
@@ -23,14 +25,18 @@ def adjacentElementsProduct(inputArray):
     return best
 ```
 
-Solution two:
+### Solution two:
+
+This solution is same as above but fancier.
 
 ```python
 def adjacentElementsProduct(inputArray):
     return max([inputArray[i] * inputArray[i+1] for i in range(len(inputArray)-1)])
 ```
 
-Solution three:
+### Solution three:
+
+This is a different approach but it's not optimal because we have to maintain an array for this.
 
 ```js
 def adjacentElementsProduct(inputArray):

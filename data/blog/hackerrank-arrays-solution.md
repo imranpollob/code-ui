@@ -10,14 +10,16 @@ link: https://www.hackerrank.com/challenges/np-arrays/problem
 draft: false
 
 ---
-Solution 1:
+### Solution one:
+
+Simply turn the `arr` into a numpy array by using buit-in `number.array` method. We are reversing the `arr` before passing it to the method.
 
 ```python
 def arrays(arr):
     return numpy.array(arr[::-1], dtype=float)
 ```
 
-Solution 2:
+### Solution two:
 
 Normal list operations are applicable on the Numpy array.
 
@@ -26,7 +28,7 @@ def arrays(arr):
     return numpy.array(arr, dtype=float)[::-1]
 ```
 
-Solution 3:
+###  Solution three:
 
 Writing `dtype` explicitly is optional but a good practice.
 
@@ -35,7 +37,7 @@ def arrays(arr):
     return numpy.array(arr, float)[::-1]
 ```
 
-Solution 4:
+### Solution four:
 
 We can use Numpy's function `flipud` to reverse the order of elements. This function also supports 2D arrays 😀.
 

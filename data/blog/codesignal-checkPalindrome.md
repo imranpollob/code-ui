@@ -8,7 +8,9 @@ link: https://app.codesignal.com/arcade/intro/level-1/s5PbmwxfECC52PWyQ
 draft: false
 ---
 
-Solution one:
+### Solution one:
+
+Looping through the array from last to first.
 
 ```python
 def checkPalindrome(inputString):
@@ -20,14 +22,18 @@ def checkPalindrome(inputString):
     return inputString == r
 ```
 
-Solution two:
+### Solution two:
+
+Using Python's default syntax.
 
 ```python
 def checkPalindrome(inputString):
     return inputString == inputString[::-1]
 ```
 
-Solution three:
+### Solution three:
+
+A JavaScript solution.
 
 ```js
 function checkPalindrome(inputString) {
@@ -35,7 +41,9 @@ function checkPalindrome(inputString) {
 }
 ```
 
-Solution four:
+### Solution four:
+
+An optimal solution because it's just looping through half of the array.
 
 ```python
 def checkPalindrome(inputString):

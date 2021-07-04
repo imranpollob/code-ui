@@ -8,7 +8,9 @@ link: https://app.codesignal.com/arcade/intro/level-1/egbueTZRRL5Mm4TXN
 draft: false
 ---
 
-Solution one:
+### Solution one:
+
+Basic straight forward solution.
 
 ```python
 def centuryFromYear(year):
@@ -17,14 +19,18 @@ def centuryFromYear(year):
     return (year // 100) + 1
 ```
 
-Solution two:
+### Solution two:
+
+Interesting solution without using else.
 
 ```python
 def centuryFromYear(year):
     return (year + 99) // 100
 ```
 
-Solution three:
+### Solution three:
+
+Same theory as above but using `math` library function.
 
 ```python
 def centuryFromYear(year):
@@ -32,7 +38,9 @@ def centuryFromYear(year):
 }
 ```
 
-Solution four:
+### Solution four:
+
+An different math approach.
 
 ```python
 def centuryFromYear(year):
