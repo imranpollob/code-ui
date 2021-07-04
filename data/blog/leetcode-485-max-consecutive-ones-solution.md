@@ -29,23 +29,17 @@ class Solution:
         return maximum
 ```
 
-110111
-^ current_max = 1
+`1`10111 current_max = 1
 
-110111
-.^ current_max = 2
+1`1`0111 current_max = 2
 
-110111
-..^ current_max = 0
+11`0`111 current_max = 0
 
-110111
-...^ current_max = 1
+110`1`11 current_max = 1
 
-110111
-....^ current_max = 2
+1101`1`1 current_max = 2
 
-110111
-.....^ current_max = 3
+11011`1` current_max = 3
 
 ### Solution two:
 
