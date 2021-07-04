@@ -73,7 +73,7 @@ export default function About() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Visit my portfolio ➡
+                Visit my portfolio &rarr;
               </Link>
             </div>
           </div>

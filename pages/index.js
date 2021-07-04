@@ -4,7 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import { PageSeo } from '@/components/SEO'
 
-export const POSTS_PER_PAGE = 10
+export const POSTS_PER_PAGE = 3
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')

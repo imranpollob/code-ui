@@ -1,6 +1,7 @@
 import { PageSeo } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
+import { getAllTags } from '@/lib/tags'
 import ListLayout from '@/layouts/ListLayout'
 import { POSTS_PER_PAGE } from '../index'
 
@@ -22,6 +23,7 @@ export async function getStaticProps(context) {
     params: { page },
   } = context
   const posts = await getAllFilesFrontMatter('blog')
+  const tags = await getAllTags('blog')
   const pageNumber = parseInt(page)
   const initialDisplayPosts = posts.slice(
     POSTS_PER_PAGE * (pageNumber - 1),
@@ -35,13 +37,14 @@ export async function getStaticProps(context) {
   return {
     props: {
       posts,
+      tags,
       initialDisplayPosts,
       pagination,
     },
   }
 }
 
-export default function PostPage({ posts, initialDisplayPosts, pagination }) {
+export default function PostPage({ posts, tags, initialDisplayPosts, pagination }) {
   return (
     <>
       <PageSeo
@@ -49,7 +52,13 @@ export default function PostPage({ posts, initialDisplayPosts, pagination }) {
         description={siteMetadata.description}
         url={`${siteMetadata.siteUrl}/${pagination.currentPage}`}
       />
-      <ListLayout posts={posts} initialDisplayPosts={initialDisplayPosts} pagination={pagination} />
+      <ListLayout
+        posts={posts}
+        tags={tags}
+        initialDisplayPosts={initialDisplayPosts}
+        pagination={pagination}
+        title={'all'}
+      />
     </>
   )
 }
