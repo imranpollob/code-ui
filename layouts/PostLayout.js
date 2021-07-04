@@ -17,8 +17,8 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
     <SectionContainer>
       <BlogSeo url={`${siteMetadata.siteUrl}/${slug}`} {...frontMatter} />
       <article>
-        <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
-          <header className="pt-6 xl:pb-6">
+        <div className="">
+          <header className="pt-6">
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
@@ -36,13 +36,13 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
             </div>
           </header>
           <div
-            className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6"
+            className="pb-8 divide-y divide-gray-200 dark:divide-gray-700"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <dl className="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200 xl:dark:border-gray-700">
+            <dl className="pt-6 pb-10">
               <dt className="sr-only">Authors</dt>
               <dd>
-                <ul className="flex justify-center space-x-8 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8">
+                <ul className="flex justify-center space-x-8 sm:space-x-12">
                   <li className="flex items-center space-x-2">
                     <Image
                       src={siteMetadata.image}
@@ -63,7 +63,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                               className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
                               target="_blank"
                             >
-                              {siteMetadata.website.replace('https://', '@')}
+                              {siteMetadata.website.replace('https://', '@').replace('.com', '')}
                             </Link>
                           </dd>
                         </>
@@ -73,7 +73,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                 </ul>
               </dd>
             </dl>
-            <div className="xl:pb-0 xl:col-span-3 xl:row-span-2">
+            <div className="xl:m-auto xl:max-w-3xl">
               {link && (
                 <div className="pt-10 uppercase font-medium text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
                   <Link
@@ -86,14 +86,14 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
               )}
 
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
-              <div className="border-t border-gray-200 dark:border-gray-700 pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
+              <div className="flex justify-center border-t border-gray-200 dark:border-gray-700 pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
+                <Link href={editUrl(fileName)}>{'📝 Edit this post'}</Link>
               </div>
             </div>
-            <footer>
-              <div className="text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2">
+            <footer className="xl:m-auto xl:max-w-3xl">
+              <div className="text-sm font-medium leading-5 divide-gray-200 dark:divide-gray-700">
                 {tags && (
-                  <div className="py-4 xl:py-8">
+                  <div className="py-4">
                     <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                       Tags
                     </h2>
@@ -105,34 +105,34 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                   </div>
                 )}
                 {(next || prev) && (
-                  <div className="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
+                  <div className="flex justify-between py-4 space-x-2">
                     {prev && (
                       <div>
-                        <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+                        <div className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                           Previous Article
-                        </h2>
-                        <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
-                          <Link href={`/${prev.slug}`}>{prev.title}</Link>
                         </div>
+                        <h2 className="text-base xl:text-lg text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
+                          <Link href={`/${prev.slug}`}>{prev.title}</Link>
+                        </h2>
                       </div>
                     )}
                     {next && (
                       <div>
-                        <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+                        <div className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                           Next Article
-                        </h2>
-                        <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
-                          <Link href={`/${next.slug}`}>{next.title}</Link>
                         </div>
+                        <h2 className="text-base xl:text-lg text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
+                          <Link href={`/${next.slug}`}>{next.title}</Link>
+                        </h2>
                       </div>
                     )}
                   </div>
                 )}
               </div>
-              <div className="pt-4 xl:pt-8">
+              <div className="pt-8">
                 <Link
                   href="/"
-                  className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+                  className="text-gray-900 dark:text-gray-300 border p-2 border-gray-900 dark:border-gray-300"
                 >
                   &larr; Back to the blog
                 </Link>
