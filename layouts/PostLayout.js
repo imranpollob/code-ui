@@ -63,7 +63,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                               className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
                               target="_blank"
                             >
-                              {siteMetadata.website.replace('https://', '@').replace('.com', '')}
+                              @pollmix
                             </Link>
                           </dd>
                         </>

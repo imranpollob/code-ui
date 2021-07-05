@@ -1,6 +1,6 @@
 const headerNavLinks = [
   { href: '/', title: 'Home' },
-  { href: '/about', title: 'About' },
+  { href: 'https://imranpollob.com/', title: 'Portfolio' },
 ]
 
 export default headerNavLinks
