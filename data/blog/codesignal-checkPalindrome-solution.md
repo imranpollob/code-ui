@@ -1,6 +1,6 @@
 ---
 date: ! '2021/07/01 '
-title: Codesignal - checkPalindrome
+title: Codesignal - checkPalindrome solution
 tags:
   - codesignal
 summary: ''

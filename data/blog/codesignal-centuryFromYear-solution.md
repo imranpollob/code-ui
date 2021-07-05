@@ -1,6 +1,6 @@
 ---
 date: ! '2021/07/01 '
-title: Codesignal - centuryFromYear
+title: Codesignal - centuryFromYear solution
 tags:
   - codesignal
 summary: ''

@@ -1,6 +1,6 @@
 ---
 date: ! '2021/07/01 '
-title: Codesignal - shapeArea
+title: Codesignal - shapeArea solution
 tags:
   - codesignal
 summary: ''

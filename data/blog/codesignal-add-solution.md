@@ -1,6 +1,6 @@
 ---
 date: ! '2021/07/01 '
-title: Codesignal - add
+title: Codesignal - add solution
 tags:
   - codesignal
 summary: ''

@@ -1,6 +1,6 @@
 ---
 date: ! '2021/07/01 '
-title: Codesignal - adjacentElementsProduct
+title: Codesignal - adjacentElementsProduct solution
 tags:
   - codesignal
 summary: ''
