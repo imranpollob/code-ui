@@ -1,10 +1,10 @@
 ---
 date: ! '2021/10/21 '
-title: Leetcode 7 - Reverse Integer
+title: Leetcode 9 - Palindrome Number
 tags:
 - leetcode
 summary: ''
-link: https://leetcode.com/problems/reverse-integer
+link: https://leetcode.com/problems/palindrome-number
 draft: false
 
 ---
