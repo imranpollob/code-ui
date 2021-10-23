@@ -1,6 +1,6 @@
 ---
 date: ! '2021/10/21 '
-title: Leetcode 9 - Palindrome Number
+title: Leetcode 9 - Palindrome Number solution
 tags:
 - leetcode
 summary: ''

@@ -1,6 +1,6 @@
 ---
 date: ! '2021/10/22 '
-title: Leetcode 1929 - Concatenation of Array
+title: Leetcode 1929 - Concatenation of Array solution
 tags:
 - leetcode
 summary: ''

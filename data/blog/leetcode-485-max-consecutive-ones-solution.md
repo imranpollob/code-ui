@@ -29,6 +29,26 @@ class Solution:
         return maximum
 ```
 
+```java
+class Solution {
+    public int findMaxConsecutiveOnes(int[] nums) {
+        int high = 0;
+        int cur = 0;
+        
+        for(int i : nums){
+            if(i == 1)
+                cur += 1;
+            else
+                cur = 0;
+                
+            high = Math.max(high, cur);
+        }
+        
+        return high;
+    }
+}
+```
+
 `1`10111 current_max = 1
 
 1`1`0111 current_max = 2
@@ -41,7 +61,33 @@ class Solution:
 
 11011`1` current_max = 3
 
-### Solution two:
+
+### Solution Two: 
+Faster than the previous approach because `max` fucntion is not running all the times.
+
+```java
+class Solution {
+    public int findMaxConsecutiveOnes(int[] nums) {
+        int high = 0;
+        int cur = 0;
+        
+        for(int i : nums){
+            if(i == 1){
+                cur += 1;                
+            } else{
+                high = Math.max(high, cur);
+                cur = 0;
+            }
+        }
+        // if last element is one
+        high = Math.max(high, cur);
+
+        return high;
+    }
+}
+```
+
+### Solution Three:
 
 For O(n) space we can reassign values to the input array.
 

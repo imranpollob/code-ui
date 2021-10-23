@@ -1,6 +1,6 @@
 ---
 date: ! '2021/10/21 '
-title: Leetcode 1480 - Running Sum of 1d Array
+title: Leetcode 1480 - Running Sum of 1d Array solution
 tags:
 - leetcode
 summary: ''

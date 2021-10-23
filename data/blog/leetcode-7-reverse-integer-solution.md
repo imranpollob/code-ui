@@ -1,6 +1,6 @@
 ---
 date: ! '2021/10/21 '
-title: Leetcode 7 - Reverse Integer
+title: Leetcode 7 - Reverse Integer solution
 tags:
 - leetcode
 summary: ''

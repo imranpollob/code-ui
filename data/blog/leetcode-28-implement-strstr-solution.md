@@ -1,6 +1,6 @@
 ---
 date: ! '2021/10/21 '
-title: Leetcode 28 - Implement strStr()
+title: Leetcode 28 - Implement strStr() solution
 tags:
 - leetcode
 summary: ''
