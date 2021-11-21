@@ -8,18 +8,19 @@ link: ''
 draft: false
 
 ---
-Binary search works on sorted arrray.
+Binary search works on sorted array.
 
-Worst complexity: O(log n)
-Average complexity: O(log n)
-Best complexity: O(1)
+Worst complexity: O(log n)   
+Average complexity: O(log n)  
+Best complexity: O(1)  
 Space complexity: O(1)
 
-### Question: 
-Find the index of given item
+### Question:
 
+Find the index of a given item
 
 ### Solution
+
 ```python
 def binary_search(arr, item):
     left = 0
