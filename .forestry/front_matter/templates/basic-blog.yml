@@ -27,6 +27,7 @@ fields:
   name: draft
   label: Draft
 pages:
+- data/blog/binary-search-coding-solution.md
 - data/blog/hackerrank-arrays-ds-solution.md
 - data/blog/hackerrank-arrays-solution.md
 - data/blog/hackerrank-solve-me-first-solution.md
