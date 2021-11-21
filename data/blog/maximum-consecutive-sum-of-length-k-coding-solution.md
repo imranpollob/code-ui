@@ -1,7 +1,8 @@
 ---
 date: ! '2021/11/21 '
 title: Maximum Consecutive Sum of Length K coding solution
-tags: []
+tags:
+- other
 summary: ''
 link: ''
 draft: false
