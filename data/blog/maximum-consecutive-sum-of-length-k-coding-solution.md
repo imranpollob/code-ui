@@ -18,6 +18,9 @@ The first method is just using a brute-force method.
 
 ```python
 def max_sum(arr, k):
+	if len(arr) < k:
+        return 'Invalid operation'
+
     maximum = 0
     # first loop to go through elements till length - k
     for i in range(len(arr) - k + 1):
@@ -43,6 +46,9 @@ Secondly, we can use the **Sliding Window** method. The method is just sliding t
 
 ```python
 def max_sum_sliding_window(arr, k):
+	if len(arr) < k:
+        return 'Invalid operation'
+
     first_sum = sum([arr[i] for i in range(k)])
 
     for i in range(1, len(arr) - k + 1):
