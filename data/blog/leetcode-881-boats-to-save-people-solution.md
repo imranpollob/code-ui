@@ -1,6 +1,6 @@
 ---
 date: ! '2021/11/23 '
-title: Leetcode 881 - Boats to Save People
+title: Leetcode 881 - Boats to Save People solution
 tags:
 - leetcode
 summary: ''
